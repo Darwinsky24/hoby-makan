@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobi Makan Kuliner Indonesia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- FONT AWESOM -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <meta name="description" content="A simple website using Bootstrap and JavaScript.">
+</head>
+
+<style>
+  
+  footer {
+      color: white;
+      text-align: center;
+      padding: 1rem;
+  }
+  
+  </style>
+
+<body>
+<!-- Gambar Background  -->
+<img class="bg-image" src="../Image/2.jpg" alt="bg gambar">
+
+    <!-- Navbar -->
+    <nav class="navbar  navbar-expand-lg navbar-dark sticky-top navbar-g ">
+        <div class="container w-75 pe-1">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../Image/logo.png" alt="Logo" width="50" height="24" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ms-5 justify-content-center"onsubmit="event.preventDefault(); searchRecipe();">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../resepmakan/Resepmakanan.html">Resep Makanan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../about/tentang.html">Tentang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../login/login.html">Login</a>
+                  </li>
+
+              </ul>
+              <form id="searchForm" class="d-flex custom-search-bar"onsubmit="event.preventDefault(); searchRecipe();">
+                <input style="color: rgb(36, 36, 36);" id="searchInput" type="search" class="form-control form-control-sm custom-input" placeholder="search" aria-label="search">
+                <button class="btn border-trans custom-button" style="color: white;" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Navbar Selesai -->
+
+
+        <!-- Slide Carousel -->
+      <div class="container w-75 p-0 p-md-auto border-trans" style="color: white;">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1613653739328-e86ebd77c9c8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                      <h5>Sambal & Lalapan</h5>
+                      <p>Makanan Khas Nusantara</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://images.pexels.com/photos/6802090/pexels-photo-6802090.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                      <h5>Kue Serabi</h5>
+                      <p>Makanan Khas Sunda - Jawa Barat</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://cdn.wisata.app/diary/f842f7d0-05d7-4162-a191-bb3627ccf813_lg.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                      <h5>Jagung Katemak</h5>
+                      <p>Makanan Khas Flores - NTT</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+              <!-- Carousel End -->
+
+    <!-- SELAMAT DATANG -->
+    <div class="container w-75 p-0 mt-5 md" style="color: white;">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 style="font-family: 'poppins','sans-serif';">Selamat datang di web resep kuliner khas Indonesia!</h1>
+                <p>Di sini, kami menyajikan berbagai resep masakan tradisional dari berbagai daerah di Nusantara. Temukan kelezatan kuliner Aceh, Jawa, Sumatra, Bali, Kalimantan, Sulawesi, dan banyak lagi. Setiap resep dipilih dengan cermat untuk menghadirkan cita rasa autentik dan keunikan dari setiap daerah. Selamat menjelajahi, mencoba, dan menikmati kelezatan masakan Indonesia di rumah Anda. Selamat memasak!</p>
+
+                <button id="clickMeButton" class="btn" style="background-color: rgb(116, 85, 8); color: aliceblue;"><b>Click Me</b></button>
+                <p id="message" class="mt-3"></p>
+            </div>
+        </div>
+    </div>
+        
+        <!-- END SELAMAT DAtANG -->
+
+        <!-- VIDEO -->
+        
+        <div class="ratio ratio-16x9 p-0 my-5">
+            <iframe width="1045" height="588" src="https://www.youtube.com/embed/8hIG9hJlxQk" title="Teaser Kuliner Indonesia Kaya (Makassar, Solo, Minang)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          
+          <h1 class="text-center pb-1" style="font-family: 'poppins','sans-serif';">Galeri Resep</h1>
+
+
+       <!-- card image -->
+      <div class="row d-flex justify-content-center mt-5 text-center">
+        <div class="col-sm-4 d-flex justify-content-center g-3">
+          <div class="card fixed-size-card" style="width: 18rem;">
+            <img src="../Image/resep1.jpeg.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Asem-Asem Daging </h5>
+              <p class="card-text">salah satu masakan Semarang yang jadi favorit kamu.</p>
+              <a href="../Resep Detail/resepdetail.html" class="btn"class="btn"style="background-color: rgb(116, 85, 8); color: aliceblue;">Resep Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 d-flex justify-content-center g-3">
+          <div class="card fixed-size-card" style="width: 18rem;">
+            <img src="../Image/resep22.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Ayam Habang</h5>
+              <p class="card-text">Resep Ayam Habang Bumbu Merah Khas Banjarmasin, Berbumbu Pekat Super Nikmat</p>
+              <a href="../Resep Detail/resepdetail2.html" class="btn " class="btn"style="background-color: rgb(116, 85, 8); color: aliceblue;">Resep Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 d-flex justify-content-center g-3">
+          <div class="card fixed-size-card" style="width: 18rem;">
+            <img src="../Image/resep3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Mangut Lele</h5>
+              <p class="card-text">Resep Mangut Lele Sederhana dengan Kuah Santan Kemangi</p>
+              <a href="../Resep Detail/resepdetail3.html" class="btn " class="btn"style="background-color: rgb(116, 85, 8); color: aliceblue;">Resep Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+<!-- card bagian bawah -->
+      <div class="row d-flex justify-content-center mt-5 text-center">
+        <div class="col-sm-4 d-flex justify-content-center g-3">
+          <div class="card fixed-size-card" style="width: 18rem;">
+            <img src="../Image/resep4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Ayam Sasando</h5>
+              <p class="card-text">Resep Ayam Goreng Sasando, Sajian Nikmat Bersambal dari NTT</p>
+              <a href="../Resep Detail/resepdetail4.html" class="btn " class="btn"style="background-color: rgb(116, 85, 8); color: aliceblue;">Resep Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 d-flex justify-content-center g-3">
+          <div class="card fixed-size-card" style="width: 18rem;">
+            <img src="../Image/resep5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Rendang</h5>
+              <p class="card-text">Lezatnya Rendang Minangkabau yang Mendunia</p>
+              <a href="../Resep Detail/resepdetail5.html" class="btn " class="btn"style="background-color: rgb(116, 85, 8); color: aliceblue;">Resep Detail</a>
+            </div>
+          </div>
+        </div>
+      <!-- card image end -->
+
+
+<!-- form rating start -->
+  <div class="container w-75 ps-4 pe-4 pb-4 md">
+      <form id="ratingForm" class="mt-5">
+          <h2 class="text-center mb-3 pt-2">Beri rating Anda:</h2>
+          <div class="form-group">
+              <label for="rating">Rating:</label>
+              <select class="form-control" id="rating" name="rating" required>
+                  <option value="">Pilih rating...</option>
+                  <option value="5">5 - Sangat Baik</option>
+                  <option value="4">4 - Baik</option>
+                  <option value="3">3 - Cukup</option>
+                  <option value="2">2 - Kurang</option>
+                  <option value="1">1 - Sangat Kurang</option>
+              </select>
+          </div>
+          <div class="grid justify-content-center">
+              <label for="comments">Komentar (opsional):</label>
+              <textarea class="form-control" id="comments" name="comments" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn"style="background-color: rgb(116, 85, 8); color: aliceblue;" >Kirim Rating</button>
+      </form>
+  </div>
+  </div>
+  </div>
+  <!-- END RATING -->
+    
+
+<!-- Footer -->
+<footer class="text-white text-center bg-tran mt-2">
+  <div class="text-align text-center pt-3">
+    <div class="row container-fluid">
+      <div class="col-md-6">
+        <p>&copy; 2024 Hobi Makan Crew. All rights reserved.</p>
+      </div>
+      <div class="col-md-6">
+        <p>Join us on :
+          <a href="https://github.com/Darwinsky24" class="text-white mx-3" style="text-decoration: none;">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://github.com/Darwinsky24" class="text-white mx-3" style="text-decoration: none;">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://github.com/Darwinsky24" class="text-white mx-3" style="text-decoration: none;">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/Darwinsky24" class="text-white mx-3" style="text-decoration: none;">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://github.com/Darwinsky24" class="text-white mx-3" style="text-decoration: none;">
+            <i class="fab fa-github"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!-- Custom JS -->
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
